@@ -3,7 +3,7 @@ Exasol python-styleguide
 Welcome to the Exasol_ python-styleguide.
 The styleguide(s) is not intend to be a universal text on how to do each single detail in python,
 it rather tries to reley on existing documents and guides references them (e.g. pep8_) and their rules or it
-will add useful additions or exceptions where Exasol_ is deverging from the *"norm"* and why.
+will add useful additions or exceptions where Exasol_ is diverging from the *"norm"* and why.
 commonly used patterns and style like pep8.
 
 
