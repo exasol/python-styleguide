@@ -19,7 +19,7 @@
 
 project = 'Python Styleguide'
 copyright = '2022, Exasol'
-author = 'Exasol'
+author = 'Exasol AG'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1.0'
