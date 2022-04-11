@@ -37,7 +37,7 @@ Code Style
 Testing
 +++++++
 
-* Pytest_    (ut, testing)
+* Pytest_    (unit-testing, testing)
 
 Documentation
 +++++++++++++
@@ -116,6 +116,7 @@ Alternatives
 
 * `tox <https://tox.wiki/en/latest/>`_
 * `make <https://en.wikipedia.org/wiki/Make_(software)>`_
+* `ThePoet <https://github.com/nat-n/poethepoet>`_
 * `cargo-make <https://sagiegurari.github.io/cargo-make/>`_
 * `just <https://github.com/casey/just>`_
 * `Ant <https://ant.apache.org/>`_
@@ -123,6 +124,35 @@ Alternatives
 * `Tusk <https://github.com/rliebz/tusk>`_
 * `Gulp <https://gulpjs.com/>`_
 * `Grunt <https://gruntjs.com/>`_
+
+PreCommit_
+++++++++++
+`Project Homepage <PreCommit_www_>`_
+
+Pros & Cons
+~~~~~~~~~~~
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50 50
+
+    * - Pros ✅
+      - Cons ❌
+    * - Widely used in non python projects
+      -
+    * - Can be used to unify and simplify the use of commit hooks
+      -
+    * - Supports "multi language" commit hooks
+      -
+    * - Takes care of "installing/updating" the hooks
+      -
+    * - Share commit hooks and replace scripts over time (instead of copying scripts)
+      -
+
+Alternatives
+~~~~~~~~~~~~
+
+* ¯\\_(ツ)_/¯
 
 
 Code Style
@@ -448,35 +478,6 @@ Alternatives
 * `pyright <https://github.com/Microsoft/pyright>`_ (microsoft)
 * `pyre-check <https://github.com/facebook/pyre-check>` (facebook, contains security checking too)
 * IDE built in e.g. PyCharm
-
-PreCommit_
-++++++++++
-`Project Homepage <PreCommit_www_>`_
-
-Pros & Cons
-~~~~~~~~~~~
-
-.. list-table::
-    :header-rows: 1
-    :widths: 50 50
-
-    * - Pros ✅
-      - Cons ❌
-    * - Widely used in non python projects
-      -
-    * - Can be used to unify and simplify the use of commit hooks
-      -
-    * - Supports "multi language" commit hooks
-      -
-    * - Takes care of "installing/updating" the hooks
-      -
-    * - Share commit hooks and replace scripts over time (instead of copying scripts)
-      -
-
-Alternatives
-~~~~~~~~~~~~
-
-* ¯\\_(ツ)_/¯
 
 Sonar_
 ++++++
