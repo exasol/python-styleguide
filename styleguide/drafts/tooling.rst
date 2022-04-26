@@ -33,6 +33,7 @@ Code Style
 
 * Black_     (style, code formatter)
 * Isort_     (style, import sorting)
+* Pyupgrade_ (style)
 
 Testing
 +++++++
@@ -240,6 +241,30 @@ Alternatives
 ~~~~~~~~~~~~
 
 * ¯\\_(ツ)_/¯ code formatters themselves (black, yapf, ..)
+
+Pyupgrade_
+++++++++++
+`Project Homepage <Isort_www_>`_
+
+Helps migrating old code (constructs) to modern one.
+
+Pros & Cons
+~~~~~~~~~~~
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50 50
+
+    * - Pros ✅
+      - Cons ❌
+    * - Less cognitive overhead for the developer
+      - Additional dependency
+    * - Less manual work for upgrading/modernizing the code base
+      -
+    * - Learning curve is very flat and short
+      -
+    * - Can be setup as pre commit hook
+      -
 
 Testing
 _______
@@ -517,3 +542,4 @@ Pros & Cons
 .. _nose: https://docs.nose2.io/en/latest/
 .. _xkcd: https://xkcd.com/
 .. _CC BY-NC 2.5: https://creativecommons.org/licenses/by-nc/2.5/
+.. _Pyupgrade: https://github.com/asottile/pyupgrade
