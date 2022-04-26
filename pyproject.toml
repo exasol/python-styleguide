@@ -2,7 +2,7 @@
 name = "python-styleguide"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Exasol <opensource@exasol.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
