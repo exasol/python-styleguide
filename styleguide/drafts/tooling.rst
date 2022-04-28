@@ -401,10 +401,10 @@ sphinx-github-pages-generator_
 ++++++++++++++++++++++++++++++
 `Project Homepage <sphinx-github-pages-generator_www_>`_
 
-Once various versions of a project are published, different users of the library
-use different versions
-To provide a common look and feel between projects and between different versions of the project,
-we have chosen to use a common sphinx theme.
+Once various versions of a project are published, different users of the project use different versions of it.
+Therefore the need to consult different versions of the project documentation arises.
+The *sphinx-github-pages-generator* addresses this issue by generating documentation for all the different versions
+in one place.
 
 Pros & Cons
 ~~~~~~~~~~~
