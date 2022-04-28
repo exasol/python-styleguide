@@ -43,7 +43,9 @@ Testing
 Documentation
 +++++++++++++
 
-* Sphinx_    (documentation)
+* Sphinx_                        (documentation)
+* Furo_                          (documentation)
+* sphinx-github-pages-generator_ (documentation)
 
 Dependencies & Packaging
 ++++++++++++++++++++++++
@@ -244,7 +246,7 @@ Alternatives
 
 Pyupgrade_
 ++++++++++
-`Project Homepage <Isort_www_>`_
+`Project Homepage <Pyupgrade_www_>`_
 
 Helps migrating old code (constructs) to modern one.
 
@@ -357,6 +359,72 @@ Alternatives
 
 * `mkdocs <https://github.com/mkdocs/mkdocs>`_
 * `pydoc <https://pdoc.dev/docs/pdoc.html>`_
+
+
+Furo_
++++++++
+`Project Homepage <Furo_www_>`_
+
+To provide a common look and feel between projects and between different versions of the project,
+we have chosen to use a common sphinx theme.
+
+Pros & Cons
+~~~~~~~~~~~
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50 50
+
+    * - Pros ✅
+      - Cons ❌
+    * - Readable font
+      - Additional dependency
+    * - Well arranged page structure
+      - Not a built-in theme
+    * - Lots of output formats are supported
+      -
+    * - Dark-mode support
+      -
+    * - Autodetect for dark mode
+      -
+    * - Popular theme
+      -
+
+Alternatives
+~~~~~~~~~~~~
+
+* `builtin themes <https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes>`_
+* `rtd-theme <https://sphinx-rtd-theme.readthedocs.io/en/stable/>`_
+
+
+sphinx-github-pages-generator_
+++++++++++++++++++++++++++++++
+`Project Homepage <sphinx-github-pages-generator_www_>`_
+
+Once various versions of a project are published, different users of the library
+use different versions
+To provide a common look and feel between projects and between different versions of the project,
+we have chosen to use a common sphinx theme.
+
+Pros & Cons
+~~~~~~~~~~~
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50 50
+
+    * - Pros ✅
+      - Cons ❌
+    * - Multi version support
+      - Early development
+    * - Writen and maintained by exasol
+      -
+
+Alternatives
+~~~~~~~~~~~~
+
+* `sphinx-multiversion <https://holzhaus.github.io/sphinx-multiversion/master/index.html>`_
+* `sphinxcontrib-versioning <https://sphinxcontrib-versioning.readthedocs.io/en/latest/>`_
 
 
 Dependencies & Packaging
@@ -542,4 +610,6 @@ Pros & Cons
 .. _nose: https://docs.nose2.io/en/latest/
 .. _xkcd: https://xkcd.com/
 .. _CC BY-NC 2.5: https://creativecommons.org/licenses/by-nc/2.5/
-.. _Pyupgrade: https://github.com/asottile/pyupgrade
+.. _Pyupgrade_www: https://github.com/asottile/pyupgrade
+.. _Furo_www: https://github.com/pradyunsg/furo
+.. _sphinx-github-pages-generator_www: https://github.com/exasol/sphinx-github-pages-generator
