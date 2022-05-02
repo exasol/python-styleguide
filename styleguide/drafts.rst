@@ -26,4 +26,5 @@ Proposals
     :maxdepth: 1
 
     drafts/tooling
+    drafts/migration
 

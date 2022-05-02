@@ -84,8 +84,10 @@ projects, switching between projects is simplified big time.
     license: `CC BY-NC 2.5`_
 
 
-Nox_
-++++
+.. _nox_marker:
+
+Nox
+++++++++
 `Project Homepage <Nox_www_>`_
 
 Pros & Cons
@@ -128,7 +130,7 @@ Alternatives
 * `Gulp <https://gulpjs.com/>`_
 * `Grunt <https://gruntjs.com/>`_
 
-PreCommit_
+PreCommit
 ++++++++++
 `Project Homepage <PreCommit_www_>`_
 
@@ -175,7 +177,7 @@ it provides benefits like easier to read diffs and higher potential for even fur
 
     Removes cognitive overhead and increases consistency, which simplifies diffs and automation.
 
-Black_
+Black
 ++++++
 `Project Homepage <Black_www_>`_
 
@@ -215,7 +217,7 @@ Alternatives
 * yapf_
 * IDE specific (e.g. PyCharm)
 
-Isort_
+Isort
 ++++++
 `Project Homepage <Isort_www_>`_
 
@@ -244,7 +246,7 @@ Alternatives
 
 * ¯\\_(ツ)_/¯ code formatters themselves (black, yapf, ..)
 
-Pyupgrade_
+Pyupgrade
 ++++++++++
 `Project Homepage <Pyupgrade_www_>`_
 
@@ -273,7 +275,7 @@ _______
 
 I do hope this does not need  any explanation in **$YEAR >= 2022**.
 
-Pytest_
+Pytest
 +++++++
 `Project Homepage <Pytest_www_>`_
 
@@ -323,7 +325,7 @@ What to say... we all want to have it and read it if we need it, but most of us 
    license: `CC BY-NC 2.5`_
 
 
-Sphinx_
+Sphinx
 +++++++
 `Project Homepage <Sphinx_www_>`_
 
@@ -361,7 +363,7 @@ Alternatives
 * `pydoc <https://pdoc.dev/docs/pdoc.html>`_
 
 
-Furo_
+Furo
 +++++++
 `Project Homepage <Furo_www_>`_
 
@@ -438,7 +440,7 @@ ________________________
    license: `CC BY-NC 2.5`_
 
 
-Poetry_
+Poetry
 +++++++
 `Project Homepage <Poetry_www_>`_
 
@@ -484,7 +486,7 @@ ___________
    source: `xkcd.com <xkcd_>`_
    license: `CC BY-NC 2.5`_
 
-Pylint_
+Pylint
 +++++++
 `Project Homepage <Pylint_www_>`_
 
@@ -572,7 +574,7 @@ Alternatives
 * `pyre-check <https://github.com/facebook/pyre-check>` (facebook, contains security checking too)
 * IDE built in e.g. PyCharm
 
-Sonar_
+Sonar
 ++++++
 `Project Homepage <Sonar_www_>`_
 
