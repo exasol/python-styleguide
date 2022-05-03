@@ -26,7 +26,7 @@ Build the Guide
 
     .. code-block::
 
-        nox -h
+        nox -l
 
 .. _Exasol: https://www.exasol.com/
 .. _pep8: https://peps.python.org/pep-0008/
