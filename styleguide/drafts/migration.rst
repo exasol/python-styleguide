@@ -61,8 +61,48 @@ Integrate :ref:`Pylint <drafts/tooling:Pylint>`
    Add nox target for checking and to assert
    Define lint value e.g. 7 to start off
 
-Integrate :ref:`MyPy <drafts/tooling:Mypy>`
+Integrate :ref:`MyPy <drafts/tooling:MyPy>`
 -------------------------------------------
+
+#. Add mypy as `dev` dependency
+
+#. Add mypy configuration to project
+
+    .. code-block:: toml
+
+        [tool.mypy]
+        files = [
+            'noxfile.py',
+        ]
+
+#. Add a nox target for typecheck.
+
+    .. code-block:: python
+
+        @nox.session(python=False)
+        def typecheck(session: Session) -> None:
+            session.run(
+                "poetry",
+                "run",
+                "mypy",
+                "--strict",
+                "--show-error-codes",
+                "--pretty",
+                "--show-column-numbers",
+                "--show-error-context",
+                "--scripts-are-modules",
+            )
+
+#. Typechecking now can be introduced step by step by adding new files to the checklist
+
+    .. code-block:: toml
+
+        [tool.mypy]
+        files = [
+            ...
+            'scripts/**/*.py',
+        ]
+
 
 Integrate :ref:`Poetry <drafts/tooling:Poetry>`
 -----------------------------------------------
