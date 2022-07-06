@@ -36,6 +36,16 @@ Integrate :ref:`Black <drafts/tooling:Black>`
             A project may decide for itself to run e.g. `fix` as a commit hook.
             The check must be run as part of the CI/CD pipeline though.
 
+configuration
+~~~~~~~~~~~~~
+
+    .. code-block:: toml
+
+        [tool.black]
+        line-length = 88
+        verbose = false
+        include = "\\.pyi?$"
+
 Integrate :ref:`Isort <drafts/tooling:Isort>`
 ---------------------------------------------
     * Executing the import formatter :ref:`drafts/tooling:Isort` should be part of at least 2 targets (fix, check)
@@ -47,6 +57,16 @@ Integrate :ref:`Isort <drafts/tooling:Isort>`
             The check must be run as part of the CI/CD pipeline though.
 
     * Make sure :ref:`drafts/tooling:Isort` is run with the *black* profile
+
+
+configuration
+~~~~~~~~~~~~~
+
+    .. code-block:: toml
+
+        [tool.isort]
+        profile = "black"
+        force_grid_wrap = 2
 
 
 Integrate :ref:`Pyupgrade <drafts/tooling:Pyupgrade>`
