@@ -15,13 +15,13 @@ recommended tooling for exasol python project(s).
 
 Integrate :ref:`Nox <drafts/tooling:Nox>`
 -----------------------------------------
-    * All important task(s) should have a target
-      (e.g.: Test, Integration Tests, Release, Docs, Githook(s) Install, ...)
-    * CI/CD [GH-Actions] builds must invoke those task(s)/targets for verification
-      (e.g. nox -s run-all-tests)
-    * Ideally all "complex" task(s) run/triggered by the dev should have a nox target
+* All important task(s) should have a target
+  (e.g.: Test, Integration Tests, Release, Docs, Githook(s) Install, ...)
+* CI/CD [GH-Actions] builds must invoke those task(s)/targets for verification
+  (e.g. nox -s run-all-tests)
+* Ideally all "complex" task(s) run/triggered by the dev should have a nox target
 
-    .. attention:: **Todo:** List of common task each  project needs to support e.g. build, run
+.. attention:: **Todo:** List of common task each  project needs to support e.g. build, run
 
 Integrate :ref:`Poetry <drafts/tooling:Poetry>`
 -----------------------------------------------
@@ -33,62 +33,71 @@ Replace existing copies of commit hooks by referencing them in a "central" repos
 configuration
 ~~~~~~~~~~~~~
 
-    .. code-block::
+.. code-block::
 
-        default_stages: [push]
-        repos:
-        - repo: local
-          hooks:
+    default_stages: [push]
+    repos:
+    - repo: local
+      hooks:
 
-        -   repo: https://github.com/pre-commit/pre-commit-hooks
-            rev: v4.2.0
-            hooks:
-            -   id: check-yaml
-            -   id: end-of-file-fixer
-            -   id: trailing-whitespace
-                exclude: ^test/integration
+    -   repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v4.2.0
+        hooks:
+        -   id: check-yaml
+        -   id: end-of-file-fixer
+        -   id: trailing-whitespace
+            exclude: ^test/integration
 
 Integrate :ref:`Black <drafts/tooling:Black>`
 ---------------------------------------------
-    * Executing the code formatter :ref:`drafts/tooling:Black` should be part of at least 2 targets (fix, check)
-        - check: check that all source files comply with the expected format
-        - fix: run code formatting on all required files to comply with the expected code format
-        - .. note::
+* Executing the code formatter :ref:`drafts/tooling:Black` should be part of at least 2 targets (fix, check)
+    - check: check that all source files comply with the expected format
+    - fix: run code formatting on all required files to comply with the expected code format
 
-            A project may decide for itself to run e.g. `fix` as a commit hook.
-            The check must be run as part of the CI/CD pipeline though.
+.. note::
+
+    A project may decide for itself to run e.g. `fix` as a commit hook.
+    The check must be run as part of the CI/CD pipeline though.
+
+.. attention::
+
+    When running **black** initially on a project make sure to commit it
+    with the `--ignore-rev` flag to avoid cluttering the git log/history.
+    For more details see `Introducing Black to your project <https://black.readthedocs.io/en/stable/guides/introducing_black_to_your_project.html>`_.
 
 configuration
 ~~~~~~~~~~~~~
 
-    .. code-block:: toml
+.. code-block:: toml
 
-        [tool.black]
-        line-length = 88
-        verbose = false
-        include = "\\.pyi?$"
+    [tool.black]
+    line-length = 88
+    verbose = false
+    include = "\\.pyi?$"
 
 Integrate :ref:`Isort <drafts/tooling:Isort>`
 ---------------------------------------------
-    * Executing the import formatter :ref:`drafts/tooling:Isort` should be part of at least 2 targets (fix, check)
-        - check: check that all source files comply with the expected format
-        - fix: run code formatting on all required files to comply with the expected code format
-        .. note::
+* Executing the import formatter :ref:`drafts/tooling:Isort` should be part of at least 2 targets (fix, check)
 
-            A project may decide for itself to run e.g. `fix` as a commit hook.
-            The check must be run as part of the CI/CD pipeline though.
+    - check: check that all source files comply with the expected format
+    - fix: run code formatting on all required files to comply with the expected code format
 
-    * Make sure :ref:`drafts/tooling:Isort` is run with the *black* profile
+    .. note::
+
+        A project may decide for itself to run e.g. `fix` as a commit hook.
+        The check must be run as part of the CI/CD pipeline though.
+
+* Make sure :ref:`drafts/tooling:Isort` is run with the *black* profile
 
 
 configuration
 ~~~~~~~~~~~~~
 
-    .. code-block:: toml
+.. code-block:: toml
 
-        [tool.isort]
-        profile = "black"
-        force_grid_wrap = 2
+    [tool.isort]
+    profile = "black"
+    force_grid_wrap = 2
 
 
 Integrate :ref:`Pyupgrade <drafts/tooling:Pyupgrade>`
@@ -96,12 +105,11 @@ Integrate :ref:`Pyupgrade <drafts/tooling:Pyupgrade>`
 
 
 Integrate :ref:`Pytest <drafts/tooling:pytest>`
-----------------------------------------------
+-----------------------------------------------
 
 Integrate :ref:`Pylint <drafts/tooling:Pylint>`
 -----------------------------------------------
-   Add nox target for checking and to assert
-   Define lint value e.g. 7 to start off
+Add nox target for checking and to assert Define lint value e.g. 7 to start off
 
 Integrate :ref:`MyPy <drafts/tooling:MyPy>`
 -------------------------------------------
@@ -148,9 +156,9 @@ Integrate :ref:`MyPy <drafts/tooling:MyPy>`
 
 Integrate :ref:`Sphinx <drafts/tooling:Sphinx>`
 -----------------------------------------------
-   - Add sphinx setup
-   - Migrate docs from .md to .rst
-   - add nox target to build, open and deploy docs
+- Add sphinx setup
+- Migrate docs from .md to .rst
+- add nox target to build, open and deploy docs
 
 Integrate :ref:`Furo <drafts/tooling:Furo>`
 -----------------------------------------------
@@ -160,6 +168,6 @@ Integrate :ref:`Pages Generator <drafts/tooling:sphinx-github-pages-generator>`
 
 Integrate :ref:`Sonar <drafts/tooling:Sonar>`
 ---------------------------------------------
-   -> Integrate pylint within sonar too
-   -> Add coverage support to repo(s) + connect with sonar
-   -> badges
+- Integrate pylint within sonar too
+- Add coverage support to repo(s) + connect with sonar
+- badges
