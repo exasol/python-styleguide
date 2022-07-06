@@ -23,8 +23,30 @@ Integrate :ref:`Nox <drafts/tooling:Nox>`
 
     .. attention:: **Todo:** List of common task each  project needs to support e.g. build, run
 
+Integrate :ref:`Poetry <drafts/tooling:Poetry>`
+-----------------------------------------------
+
 Integrate :ref:`PreCommit <drafts/tooling:precommit>`
 -----------------------------------------------------
+Replace existing copies of commit hooks by referencing them in a "central" repository.
+
+configuration
+~~~~~~~~~~~~~
+
+    .. code-block::
+
+        default_stages: [push]
+        repos:
+        - repo: local
+          hooks:
+
+        -   repo: https://github.com/pre-commit/pre-commit-hooks
+            rev: v4.2.0
+            hooks:
+            -   id: check-yaml
+            -   id: end-of-file-fixer
+            -   id: trailing-whitespace
+                exclude: ^test/integration
 
 Integrate :ref:`Black <drafts/tooling:Black>`
 ---------------------------------------------
@@ -123,9 +145,6 @@ Integrate :ref:`MyPy <drafts/tooling:MyPy>`
             'scripts/**/*.py',
         ]
 
-
-Integrate :ref:`Poetry <drafts/tooling:Poetry>`
------------------------------------------------
 
 Integrate :ref:`Sphinx <drafts/tooling:Sphinx>`
 -----------------------------------------------
