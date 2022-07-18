@@ -1,7 +1,7 @@
 ---
-name: Bug Report 
+name: 🐞 Bug Report 
 about: File a bug report 
-title: <Insert Title> 
+title: 🐞 <Insert Title> 
 labels: bug
 assignees: ''
 
@@ -43,6 +43,12 @@ Describe the expected behaviour: A clear and concise description of what you exp
 Describe the actual observed behaviour: A clear and concise description of what you actually to happen.
 Screenshot: If applicable, add screenshots to help explain your problem.
 -->
+
+## Root Cause (optional)
+<!---
+If known
+-->
+
 
 ## Context
 <!---
