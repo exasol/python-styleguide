@@ -27,4 +27,5 @@ Proposals
 
     drafts/tooling
     drafts/migration
+    drafts/issues
 
