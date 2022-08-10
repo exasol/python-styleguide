@@ -51,8 +51,11 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 html_theme = "furo"
 html_title = "Python Styleguide"
+
 html_theme_options = {
     "sidebar_hide_name": False,
+    "light_logo": "images/light-exasol-logo.svg",
+    "dark_logo": "images/dark-exasol-logo.svg",
     "footer_icons": [
         {
             "name": "GitHub",
