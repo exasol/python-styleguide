@@ -6,6 +6,7 @@ authors = ["Exasol <opensource@exasol.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
+sphinx-copybutton = "^0.5.0"
 
 [tool.poetry.dev-dependencies]
 Sphinx = "^4.5.0"
