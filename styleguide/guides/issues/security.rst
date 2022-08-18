@@ -4,6 +4,8 @@
 TBD
 ---
 - criticality (security)
+- CVE if available
+- If it affects certain packages, add the package versions in the ticket
 
 Template
 --------
