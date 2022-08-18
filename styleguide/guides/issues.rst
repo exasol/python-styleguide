@@ -44,7 +44,7 @@ What makes a good issue?
 
 Like a good/bad book/website not only about the amount of the content rather on how well
 it is organized cross references and the quality and understandability of the text ...
-Whatever helps the reader links, media, external references. Still be preceise
+Whatever helps the reader links, media, external references. Still be precise
 sweet spot ... life and humans stuff even gets maintained or it gets broken, broken
 tickets create more work than they do good. ruin vs level ground for building something new
 
