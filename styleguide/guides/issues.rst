@@ -64,7 +64,7 @@ of typos and the overall structure you expect the whole documentation to contain
 
 Possible Action(s)
 ~~~~~~~~~~~~~~~~~~
-* If the documentation is not to big and you can make the time you can fix the typos right without creating an issue.
+* If the documentation is not to big and you can make the time to fix the typos right away without creating an issue.
 * If the documentation is quite big, and fixing this e.g. would take you more than 1/2 a day you definitely should create an issue.
 * You are unsure how long it will take to address and check the documentation and you currently can't spent time for detours create an issue.
 

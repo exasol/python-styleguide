@@ -13,7 +13,7 @@ In order to improve the time, how long a bugfix does take, please make sure you 
 - [ ] I have checked the issue tracker for the same issue and I haven't found one similar.
 - [ ] I have reproduced the issue with at least the latest released version of \<PROJECT-NAME\>.
 
-**Tip: Adding screenshots can help(s) to improve clarity.**
+**Tip: Adding screenshots, outputs and logs help to improve clarity.**
 
 # Summary
 <!---
@@ -52,7 +52,7 @@ If known
 
 ## Context
 <!---
-Describe the actual observed behaviour: A clear and concise description of what you actually to happen.
+Describe the actual observed behaviour: A clear and concise description of what you observed.
 Screenshot: If applicable, add screenshots to help explain your problem.
 -->
 
