@@ -1,8 +1,9 @@
 🔧 Refactoring
 ==============
 
+Example
+-------
 TBD
----
 
 Template
 --------

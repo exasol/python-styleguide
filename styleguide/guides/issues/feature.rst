@@ -1,8 +1,9 @@
 ✨ Feature
 ==========
 
+Example
+-------
 TBD
----
 
 Template
 --------

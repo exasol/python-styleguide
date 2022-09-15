@@ -6,3 +6,32 @@ labels: documentation
 assignees: ''
 
 ---
+
+# Summary
+<!---
+A short summary on what of what needs to be documented or updated.
+--->
+
+# Details
+<!---
+A detailed description about what kind of documentation should be added and/or updated and why.
+--->
+
+## Background & Context
+<!--- Optional --->
+
+## References
+<!---
+Further references to e.g. other information resources like links to specification(s), api docs etc.
+--->
+
+# Task(s)
+<!---
+A task list containing common task associated with this kind of issue, but also tasks specific to this issue.
+
+e.g.:
+- [ ] Update documentation of XYZ
+- [ ] Bump version number
+- [ ] Update changelog
+- [ ] ...
+--->

@@ -7,9 +7,9 @@
 
    issues/security
    issues/bug
+   issues/feature
    issues/refactoring
    issues/documentation
-   issues/feature
 
 Summary
 +++++++

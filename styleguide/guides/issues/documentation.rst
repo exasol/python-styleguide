@@ -1,8 +1,9 @@
 📚 Documentation
 ================
 
+Example
+-------
 TBD
----
 
 Template
 --------
