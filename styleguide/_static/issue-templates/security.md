@@ -22,7 +22,7 @@ A short summary of the security issue.
 <!---
 A quick table based overview, containing the most important details.
 
-Class/Type: Of vulnerability, e.g. xss, buffer-overflow, ...
+Class/Type: Of vulnerability, e.g. xss, buffer-overflow, ... (see https://cwe.mitre.org/
 Versions: Affected software versions
 Severity: Of the vulnerability (Low, Medium, High, Critical)
 CVE Number: number and link to the cve if available

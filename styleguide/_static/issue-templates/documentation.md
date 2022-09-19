@@ -18,7 +18,11 @@ A detailed description about what kind of documentation should be added and/or u
 --->
 
 ## Background & Context
-<!--- Optional --->
+<!---
+Why should this documentation be added/updated?
+
+E.g.: Users are struggling to use this API and have repeatedly asked for some example code.
+--->
 
 ## References
 <!---
