@@ -74,13 +74,13 @@ What makes a good issue
     **TL;DR:** An good issue describes a piece of work, it's context and it's assumption in a way, any person capable of working
     on the project, can understand it, based on the information referenced and within the issue.
 
-To begin with, we want to make sure you understand that creating good a issues is not a zero effort action. Various things
+To begin with, we want to make sure you understand that creating good a issue is not a zero effort action. Various things
 like issue templates, can remove tedious boilerplate work, but still creating a good issue is some actual work.
 It is crucial to have well crafted issues, because bad issues do way more harm than good. So let's take a step
 back and let's think about why we need to have good issues, in order to better understand what actually makes a good issue.
 
 Boiled down to it's core issue tracking is just a list of pieces of work which are needed to be done.
-This list in turn, than can be used to plan, organize and track "progress/work".
+This list in turn, then can be used to plan, organize and track "progress/work".
 
 Broken down to an individual issue, this means an issue should provide all relevant information about
 a "single" piece/unit of work.
@@ -157,16 +157,118 @@ of it.
     More details on a specific issue type you will find in the corresponding subsection(s) of this guide.
 
 
-How to maintain and issue
-+++++++++++++++++++++++++
-* TBD
+How to maintain an issue (TBD)
+++++++++++++++++++++++++++++++
+Various factors can change aspects of an issue, e.g. newly received information via a comment.
+This section focuses on how handle this aspects and to keep the ticket relevant and up to date.
 
-  - How to update status etc.
+Most Common External factors
+----------------------------
+
+* Issue receives comment(s)
+* The assignee is working on the issue
+* External Changes .... library version, deprecation
 
 
-How to maintain a the backlog
-+++++++++++++++++++++++++++++
-* TBD
+General Rules
+-------------
 
-  - How to keep backlog "clean" (remove/close outdated issues etc.)
+Upadate while working on the issue
+The reduce friction of people polling updates and interrupting you working on the issue, try to post regular
+update(s). Often one would say nothing new ... still debugging ... still give the pople some
+more information what are your leads, which leads put you in a dead end ... try to think
+what information you would give somebody which needs to take over your task, without needing
+to do all your work from scratch.
+
+up to date when new information or context gets available,
+e.g. because it receivedit is in progress or  are working on it ( us an how and when to update.
+
+Received Comments
+-----------------
+
+* make sure comments can be understood, if needed clarify
+* make sure comment(s) are relevant otherwise suggest e.g. to move to discussion forum or new issue of type question
+
+Working on the issue WIP
+------------------------
+In the great future 🚀 we may have perfect project planing, but not today! Until then we need and cope with various <<CENSORED>> problems.
+This section will help you on how to work with an issue, so customers, project management, other developers
+and you can get the most out of the information within an issue which is being worked on.
+
+
+Update regularly
+
+* Mark issues which are being worked on as **in progress**
+* Update the issue, at least every 2-3 days
+    * Post a status message
+        * Report which tasks/subtasks have been done already
+        * Describe current roadblocks
+        * Describe current strategies and findings e.g. for bugs
+    * Update the issue itself
+        * If needed split up new issues and link them to the current one
+        * Add root cause once found out
+        * ...
+* Move issue not begin not begin worked on back into the appropriate state, e.g. **backlog**
+
+
+**Example:**
+
+.. code-block:: markdown
+
+    # Status Update
+    Further investigation's have shown that the basic SQLA test suite mostly is intact after the upgrade to `1.4` (14 failures), when run in "isolation". Various exasol specific test suites:
+
+       * test/test_get_metadata_functions.py
+       * test/test_large_metadata.py
+       * test/test_regression.py (TranslateMap)
+
+    seem to have negative side effects which cause 100+ tests to  :boom: fail/crash, if run after those test suites.
+    This further strengthens the case for the **assumptions** mentioned in the previous update:
+
+       * Setup/Teardown mechanic of `testing.fixtures.TablesTest` has changed
+       * Setup/Teardown mechanic fails due to leftovers in tests DB
+
+    Also, this narrows down the potential root cause(s).
+
+    ## Remark(s)
+    Common to all those test suites to be that they add/remove schemas.
+    For `test/test_regression.py` it have been proven that the schema manipulating test (`TranslateMap`) causes some negative side effect on following test suits.
+
+    ## Notes & Ideas (from discussion with @tkilias )
+    * Is schema inference still working correctly?
+    * Does the "disabled" caching cause side effects?
+    * Do implicit schema open and closes affect the current schema for follow up tests?
+
+    ## Next Steps
+    * Analyze effects of implicit open/close of schema(s)
+    * A more in depth analysis regarding side effects and cleanup of the mentioned test suites will be done
+
+To see the example update in it's full context look `here <https://github.com/exasol/sqlalchemy-exasol/issues/106#issuecomment-1245305351>`_.
+
+
+How to maintain a the backlog (TBD)
++++++++++++++++++++++++++++++++++++
+
+Idea-Cloud (TODO: rework)
+
+* Search for active tickets with no updates in a week
+* Times are suggestions on time/intervals are highly dependent on the ticket throughput and ticket creation/inflow rate
+* Check "new" issues for issue standards compliance (Weekly)
+   * enough infor etc.
+   * contains all relevant information
+   * isn't a duplicate
+* Check long running issue (Weekly)
+   * forgotten, abandoned, updated?
+* Check all issues for validity (Monthly)
+   * still relevant? already using other 3thrid party lib or refactored huge parts?
+* Ideally have issue creators check on their tickets if their still valid
+* triage
+  * How to keep backlog "clean" (remove/close outdated issues etc.)
+  * Triage ... is ticket still relevant ? ... maybe time invalidated the need of having this issue
+  * Is the ticket sufficient well written to understand what needs to be done?
+  * Have  tickets which are in progress a update which is not older than ~1 week
+  * aged, label, and written correctly
+  * Mark and close duplicates
+  * SHelve?
+  * Triage and assign quickly
 
