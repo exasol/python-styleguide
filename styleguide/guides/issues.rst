@@ -157,7 +157,7 @@ of it.
     More details on a specific issue type you will find in the corresponding subsection(s) of this guide.
 
 
-How to maintain an issue (TBD)
+How to maintain an issue (WIP)
 ++++++++++++++++++++++++++++++
 Various factors can change aspects of an issue, e.g. newly received information via a comment.
 This section focuses on how handle this aspects and to keep the ticket relevant and up to date.
@@ -189,8 +189,8 @@ Received Comments
 * make sure comments can be understood, if needed clarify
 * make sure comment(s) are relevant otherwise suggest e.g. to move to discussion forum or new issue of type question
 
-Working on the issue WIP
-------------------------
+Working on the issue
+--------------------
 In the great future 🚀 we may have perfect project planing, but not today! Until then we need and cope with various <<CENSORED>> problems.
 This section will help you on how to work with an issue, so customers, project management, other developers
 and you can get the most out of the information within an issue which is being worked on.
@@ -246,10 +246,8 @@ Update regularly
 To see the example update in it's full context look `here <https://github.com/exasol/sqlalchemy-exasol/issues/106#issuecomment-1245305351>`_.
 
 
-How to maintain a the backlog (TBD)
+How to maintain a the backlog (WIP)
 +++++++++++++++++++++++++++++++++++
-
-Idea-Cloud (TODO: rework)
 
 * Search for active tickets with no updates in a week
 * Times are suggestions on time/intervals are highly dependent on the ticket throughput and ticket creation/inflow rate
