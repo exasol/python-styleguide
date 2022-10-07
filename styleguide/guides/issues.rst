@@ -25,7 +25,6 @@ you are working on, by answering the following questions:
 * When to create an issue?
 * What makes a good issue?
 * How to maintain an issue?
-* How to maintain a backlog?
 
 When to create an issue?
 ++++++++++++++++++++++++
@@ -157,61 +156,93 @@ of it.
     More details on a specific issue type you will find in the corresponding subsection(s) of this guide.
 
 
-How to maintain an issue (WIP)
-++++++++++++++++++++++++++++++
-Various factors can change aspects of an issue, e.g. newly received information via a comment.
-This section focuses on how handle this aspects and to keep the ticket relevant and up to date.
+How to maintain an issue
+++++++++++++++++++++++++
+As you already know an issue does not only keep track of what needs to be done, but also about it's context (how, why, etc.).
+This context can be a quite dynamic though, especially for tasks which bare a larger amount of uncertainty (e.g. bugs).
+So a huge part of keeping an issue up to date, is keep updating it's context. The following scenarios will
+try to give you an idea on how to update and maintain an issue in various scenarios.
 
-Most Common External factors
-----------------------------
+TL;DR
+-----
 
-* Issue receives comment(s)
-* The assignee is working on the issue
-* External Changes .... library version, deprecation
+* Keep the issue and it's context up to date
+    * Keep the status up to date [Backlog, In Progress, ...]
+    * Update tickets which are actively worked on regularly (at least every 2-3 days)
+    * Try to communicate new information via comments (e.g. status update's)
+    * Report important changes because of internal and external events
 
-
-General Rules
--------------
-
-Upadate while working on the issue
-The reduce friction of people polling updates and interrupting you working on the issue, try to post regular
-update(s). Often one would say nothing new ... still debugging ... still give the pople some
-more information what are your leads, which leads put you in a dead end ... try to think
-what information you would give somebody which needs to take over your task, without needing
-to do all your work from scratch.
-
-up to date when new information or context gets available,
-e.g. because it receivedit is in progress or  are working on it ( us an how and when to update.
-
-Received Comments
------------------
-
-* make sure comments can be understood, if needed clarify
-* make sure comment(s) are relevant otherwise suggest e.g. to move to discussion forum or new issue of type question
-
-Working on the issue
---------------------
-In the great future 🚀 we may have perfect project planing, but not today! Until then we need and cope with various <<CENSORED>> problems.
-This section will help you on how to work with an issue, so customers, project management, other developers
-and you can get the most out of the information within an issue which is being worked on.
+* Comments
+    * Respond to comments in a timely manner
+    * Stay friendly and focused on the issue when responding to comments
 
 
-Update regularly
 
-* Mark issues which are being worked on as **in progress**
-* Update the issue, at least every 2-3 days
-    * Post a status message
-        * Report which tasks/subtasks have been done already
-        * Describe current roadblocks
-        * Describe current strategies and findings e.g. for bugs
-    * Update the issue itself
-        * If needed split up new issues and link them to the current one
-        * Add root cause once found out
-        * ...
-* Move issue not begin not begin worked on back into the appropriate state, e.g. **backlog**
+Scenarios
+---------
+
+A developer picks up the issue from the backlog and starts working on it
+________________________________________________________________________
+
+* Assign the ticket to the developer working on it
+* Change the state of the issue to "In Progress"
+
+    .. note::
+
+        Most issue tracking system already take care of this if you move it
+        to the appropriate category in the issue(s) overview.
+
+The Issue Receives a comment
+____________________________
+
+* Make sure to reply to a comment in a timely manner
+* If it is the first contribution/comment of the contributor on this issue, show appreciation for the contribution.
+    * If the comment can't be addressed right away, at least acknowledge the comment and communicate some timeframe
+* Make sure the comment can be understood in the context of the issue
+    * If needed ask for clarification
+    * If needed ask follow up questions
+* Be clear in your response(s)
+    * Make sure relevance, importance, course of action and timeframe are communicated if necessary
+
+The Developer stop's/postpones working on the issue, e.g. due to re prioritization
+__________________________________________________________________________________
+
+* Remove assignee on the ticket
+* Change the state of the issue to "Backlog"
+
+    .. note::
+
+        Most issue tracking system already take care of this if you move it
+        to the appropriate category in the issue(s) overview.
+
+* Make sure all current context information is updated or added as status comment to the issue
+* Add information about why working on the issue have been postponed/stopped (e.g. blocked)
+    * Except if this would disclose information to the wrong audience
+* Communicate when work on the issue will be picked up again
+    * Communicating that it is unclear when the work will be continued, is also fine
+
+Stalled issue (e.g. root cause of bug is hard to find)
+______________________________________________________
+
+.. note::
+
+    Very rarely the issue (work) is really stalled, often it just feels like this.
+    When you can't report on explicitly achieved task(s), provide context information
+    about your work (journey). This can help you and others to pickup on it latter
+    or at least it help to understand the current state more clearly.
+
+* Regularly post a status update on the issue (every 2-3 days)
+    * What issues/problems already have been ruled out and why?
+    * What is the current strategy to find the culprit?
+    * What is the current strategy to resolve roadblocks?
+    * What are the current assumptions and hunches?
+    * Are there any further leads to be investigated in the future?
+    * Describe the current roadblocks
+    * Report sub partial successes
+    * Add script's and context information which helps to reproduce and/or trigger the bug
 
 
-**Example:**
+**Example:** Status Update on Bug Issue
 
 .. code-block:: markdown
 
@@ -244,29 +275,3 @@ Update regularly
     * A more in depth analysis regarding side effects and cleanup of the mentioned test suites will be done
 
 To see the example update in it's full context look `here <https://github.com/exasol/sqlalchemy-exasol/issues/106#issuecomment-1245305351>`_.
-
-
-How to maintain a the backlog (WIP)
-+++++++++++++++++++++++++++++++++++
-
-* Search for active tickets with no updates in a week
-* Times are suggestions on time/intervals are highly dependent on the ticket throughput and ticket creation/inflow rate
-* Check "new" issues for issue standards compliance (Weekly)
-   * enough infor etc.
-   * contains all relevant information
-   * isn't a duplicate
-* Check long running issue (Weekly)
-   * forgotten, abandoned, updated?
-* Check all issues for validity (Monthly)
-   * still relevant? already using other 3thrid party lib or refactored huge parts?
-* Ideally have issue creators check on their tickets if their still valid
-* triage
-  * How to keep backlog "clean" (remove/close outdated issues etc.)
-  * Triage ... is ticket still relevant ? ... maybe time invalidated the need of having this issue
-  * Is the ticket sufficient well written to understand what needs to be done?
-  * Have  tickets which are in progress a update which is not older than ~1 week
-  * aged, label, and written correctly
-  * Mark and close duplicates
-  * SHelve?
-  * Triage and assign quickly
-

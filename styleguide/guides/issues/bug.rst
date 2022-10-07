@@ -1,10 +1,6 @@
 🐞 Bug
 ======
 
-Example
--------
-TBD
-
 Template
 --------
 

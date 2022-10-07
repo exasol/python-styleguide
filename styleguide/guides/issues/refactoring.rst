@@ -1,10 +1,6 @@
 🔧 Refactoring
 ==============
 
-Example
--------
-TBD
-
 Template
 --------
 

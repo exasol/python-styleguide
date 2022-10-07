@@ -1,10 +1,6 @@
 ✨ Feature
 ==========
 
-Example
--------
-TBD
-
 Template
 --------
 

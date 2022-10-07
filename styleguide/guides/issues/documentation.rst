@@ -1,10 +1,6 @@
 📚 Documentation
 ================
 
-Example
--------
-TBD
-
 Template
 --------
 
