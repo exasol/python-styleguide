@@ -10,8 +10,8 @@ assignees: ''
 ### Checklist
 In order to improve the time, how long a bugfix does take, please make sure you address as much as possible of the following checklist.
 
-- [ ] I have checked the issue tracker for the same issue and I haven't found one similar.
 - [ ] I have reproduced the issue with at least the latest released version of \<PROJECT-NAME\>.
+- [ ] I have added references to issues that sound similar.
 
 **Tip: Adding screenshots, outputs and logs help to improve clarity.**
 
