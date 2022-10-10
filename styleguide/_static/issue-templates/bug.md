@@ -20,7 +20,9 @@ In order to improve the time, how long a bugfix does take, please make sure you 
 Describe the bug: A clear and concise description of what the bug is.
 -->
 
-## Reproduce the Issue
+## Reproducing the Issue
+
+Reproducibility: <pick one of> sporadic, regularly, always
 <!---
 Describe how to reproduce the bug, e.g.:
 1. Go to '...'
