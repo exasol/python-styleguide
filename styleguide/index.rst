@@ -7,6 +7,7 @@ Python Styleguide
 
     guides/tooling
     guides/migration
+    guides/issues
 
 
 Welcome
