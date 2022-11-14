@@ -1,5 +1,5 @@
-Task Runner & Automation
-========================
+🤖 Task Runner & Automation
+===========================
 
 A task runner is great for automating common workflows like running tests, building the project etc..
 A second benefit of a task runner is, that it is a "in code"/"in config" documentation of the steps

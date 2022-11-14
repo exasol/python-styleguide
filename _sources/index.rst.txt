@@ -6,7 +6,6 @@ Python Styleguide
     :hidden:
 
     guides/tooling
-    guides/migration
     guides/issues
 
 
