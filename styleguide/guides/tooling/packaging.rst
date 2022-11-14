@@ -1,5 +1,5 @@
-Dependencies & Packaging
-========================
+📦 Dependencies & Packaging
+===========================
 
 .. figure:: https://imgs.xkcd.com/comics/dependency.png
    :alt: xkcd-2347

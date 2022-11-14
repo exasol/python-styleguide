@@ -1,7 +1,7 @@
 :ref:`Black <guides/tooling/code-style:Black>`
-=============================================
+===============================================
 
-* Executing the code formatter :ref:`guides/tooling:Black` should be part of at least 2 targets (fix, check)
+* Executing the code formatter :ref:`guides/tooling/code-style:Black` should be part of at least 2 targets (fix, check)
     - check: check that all source files comply with the expected format
     - fix: run code formatting on all required files to comply with the expected code format
 
