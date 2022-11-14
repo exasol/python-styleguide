@@ -1,5 +1,5 @@
-Code Health
-===========
+🚑 Code Health
+==============
 
 .. figure:: https://imgs.xkcd.com/comics/code_quality.png
    :alt: xkcd-2347

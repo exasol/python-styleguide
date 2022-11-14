@@ -23,6 +23,7 @@ ________
    tooling/packaging
    tooling/code-health
    tooling/misc
+   tooling/migration
 
 Justification
 _____________

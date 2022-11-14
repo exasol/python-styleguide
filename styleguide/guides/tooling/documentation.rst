@@ -1,5 +1,5 @@
-Documentation
-=============
+📚 Documentation
+================
 
 What to say... we all want to have it and read it if we need it, but most of us don't want to write it.
 

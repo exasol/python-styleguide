@@ -1,5 +1,5 @@
-Code Style
-==========
+⛩ Code Style
+=============
 
 Automated formatting ensures a common code style across the projects and removes the burden of manually ensuring
 code is complying with the project(s) style/standard. This results in less work, less distraction and futhermore
