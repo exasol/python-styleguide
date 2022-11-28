@@ -1,0 +1,752 @@
+Idioms
+_______
+
+.. note::
+
+    The initial list of this idioms have been taken form `Raymond Hettinger`_'s
+    Talk - "`Transform Code into Beautiful, Idiomatic Python`_" (`Transform Python Slides`_).
+    The list then been updated and extended, we will do our best to give credit for each idom to the source
+    where we picked it up from, by annotating it the following way:
+
+        💡 learnt from: <Source>, [Reference]
+
+        or
+
+        💡 learnt from:
+
+        * Source: <Source>
+        * Reference: [Reference]
+
+        ---
+
+        <Source>: being an author name, book name, etc.
+
+        [Reference]: Optional, a concrete reference to the idiom or the source where it stems from.
+
+    That being said, one should be aware that small patterns and idioms often times get "invented" independently
+    by multiple sources. It is not always clear who was the original source of a specific pattern or idiom.
+    Therefore our marker intentionally was named *learnt from* because we want communicate, it is the source
+    where we picked it up from, rather than the "original" source.
+
+
+Strings
+-------
+
+Concatenation
++++++++++++++
+Use *.join* to to concatenate strings
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/concat.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/concat.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/concat.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+f-Strings
++++++++++
+Use f-String for simple placeholder expressions
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/fstring.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/fstring.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/fstring.py
+        :language: python3
+
+
+String.format
++++++++++++++
+Use the string format function for complex expressions
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/format.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/format.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/format.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Robert Smallshire`_ , `Austin Bingham`_
+* References: `Rober Smallshire - Courses`_, `Austin Bingham - Courses`_
+
+General
+-------
+
+Switch
+++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/switch.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/switch.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/switch.py
+        :language: python3
+
+
+Named Parameters
+++++++++++++++++
+Use named parameters for inline primitive types (when it makes the call site easier to understand).
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/named_parameters.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/named_parameters.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/named_parameters.py
+        :language: python3
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+Unpacking
++++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/unpacking.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/unpacking.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/unpacking.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+Looping
+-------
+
+Collection
+++++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/loop_collection.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/loop_collection.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/loop_collection.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+
+Numbers
+++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/loop_numbers.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/loop_numbers.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/loop_numbers.py
+        :language: python3
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+Enumerate
++++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/enumerate.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/enumerate.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/enumerate.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+
+Reverse
++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/reverse.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/reverse.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/reverse.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+Two Collections
++++++++++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/loop_two_collections.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/loop_two_collections.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/loop_two_collections.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+
+Sentinel
+++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/sentinel.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/sentinel.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/sentinel.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+Dictionaries
+------------
+
+From Pairs
+++++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/pairs.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/pairs.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/pairs.py
+        :language: python3
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+Count
++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/count.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/count.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/count.py
+        :language: python3
+
+Layering
+++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../_static/idioms/layering.py
+        :language: python3
+        :start-after: # Good
+        :end-before: # Bad
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../_static/idioms/layering.py
+        :language: python3
+        :start-after: # Bad
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/layering.py
+        :language: python3
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+
+Separation of Concerns
+----------------------
+
+Adapters
+++++++++
+
+.. tab:: ✅ With Adapter
+
+    .. literalinclude:: ../_static/idioms/adapter.py
+        :language: python3
+        :start-after: # WithAdapter
+
+.. tab:: ❌ Naive Approach
+
+    .. literalinclude:: ../_static/idioms/adapter.py
+        :language: python3
+        :start-after: # Naive Approach
+        :end-before: # With Adapter
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../_static/idioms/adapter.py
+        :language: python3
+
+
+**💡 learnt from:**
+
+* Source: `Will McGugan`_
+* Reference: `Stealing Open Source code from Textual`_
+
+    `Adapter's used in textual <https://github.com/Textualize/textual/blob/d2ba22b86f48f4ce5b0f55767efdcf1a5478b180/src/textual/_loop.py>`_
+
+    .. tab:: loop_first
+
+        .. code-block:: python
+
+            from __future__ import annotations
+
+            from typing import Iterable, TypeVar
+
+            T = TypeVar("T")
+
+
+            def loop_first(values: Iterable[T]) -> Iterable[tuple[bool, T]]:
+                """Iterate and generate a tuple with a flag for first value."""
+                iter_values = iter(values)
+                try:
+                    value = next(iter_values)
+                except StopIteration:
+                    return
+                yield True, value
+                for value in iter_values:
+                    yield False, value
+
+
+    .. tab:: loop_last
+
+        .. code-block:: python
+
+            from __future__ import annotations
+
+            from typing import Iterable, TypeVar
+
+            T = TypeVar("T")
+
+
+            def loop_last(values: Iterable[T]) -> Iterable[tuple[bool, T]]:
+                """Iterate and generate a tuple with a flag for last value."""
+                iter_values = iter(values)
+                try:
+                    previous_value = next(iter_values)
+                except StopIteration:
+                    return
+                for value in iter_values:
+                    yield False, previous_value
+                    previous_value = value
+                yield True, previous_value
+
+
+    .. tab:: loop_first_last
+
+        .. code-block:: python
+
+            from __future__ import annotations
+
+            from typing import Iterable, TypeVar
+
+            T = TypeVar("T")
+
+
+            def loop_first_last(values: Iterable[T]) -> Iterable[tuple[bool, bool, T]]:
+                """Iterate and generate a tuple with a flag for first and last value."""
+                iter_values = iter(values)
+                try:
+                    previous_value = next(iter_values)
+                except StopIteration:
+                    return
+                first = True
+                for value in iter_values:
+                    yield first, False, previous_value
+                    first = False
+                    previous_value = value
+                yield first, True, previous_value
+
+Filters
++++++++
+
+.. tab:: ✅ Good
+
+    .. code-block:: python
+
+        numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        odd = filter(lambda n: n % 2, numbers)
+        even = (number for number in numbers if not number % 2)
+
+        print(f"Sum of odd values: {sum(odd)}")
+        print(f"Sum of even values: {sum(even)}")
+
+
+.. tab:: ❌ Bad
+
+    .. code-block:: python
+
+        numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        odd = 0
+        even = 0
+
+        for number in numbers:
+            if number % 2:
+                odd += number
+            else:
+                even += number
+
+        print(f"Sum of odd values: {odd}")
+        print(f"Sum of even values: {even}")
+
+
+Context
+++++++++++++++
+* Factor out context e.g. cwd
+* user __enter__ , __exit__ if scope can't be used
+
+Decorators
++++++++++++
+
+Nesting
++++++++
+
+use local/hidden function(s) to simplify your code and simplify future refactorings
+- pass everything you need
+
+
+
+Caching
+-------
+* easy in python
+
+Filter iterables
+-----------------
+
+Examples
+++++++++
+
+❌ Bad
+
+.. code-block:: python
+
+    majority_aged_users = []
+    for user in users:
+        if user.age >= 18:
+            majority_aged_users.append(user)
+
+
+✅ Good
+
+.. code-block:: python
+
+    majority_aged_users = (user for user in users if user.age >= 18)
+
+
+Call a function until a sentinel value
+--------------------------------------
+
+Examples
+++++++++
+
+.. tab:: ✅ Good
+
+    .. code-block:: python
+
+        blocks = []
+        for block in iter(partial(f.read, 32), ''):
+        blocks.append(block)
+
+
+.. tab:: ❌ Bad
+
+    .. code-block:: python
+
+        blocks = []
+        while True:
+            block = f.read(32)
+            if block == '':
+                break
+            blocks.append(block)
+
+**💡 learnt from:**
+
+* Source: `Raymond Hettinger`_
+* Reference: `Transform Python Slides`_
+
+Stdlib itertools & co
+---------------------
+* ChainMap
+* Chain (example serialize object)
+* ...
+
+Don't use naked print statements
+--------------------------------
+* never use print's in non view layers
+* consider using a logger
+* use print with file=sys.stdout and file=sys.stderr
+
+CLI's
+-----
+
+Exit Codes
+++++++++++
+* only top level
+* return at least 0, 1 or 2
+
+Stdout vs Stderr
+++++++++++++++++
+* data vs status
+* piping data
+* use an indirection  input/output
+* only top level
+
+Logging vs print
+++++++++++++++++
+* instead of print impl. __str__ and __repr__ and or __format__
+* print not ideal see stdout vs stderr
+* only top level
+* global "uncontrollable" output stream
+
+
+Dict, use default value for single entry or always if not available.
+
+Names Tuples
+Dataclasses
+
+with as resource mgt. where it "leaves the block"
+
+Collections, Iterables & Co.
+----------------------------
+
+Two Collections
+++++++++++++++++
+
+.. code-block:: python
+
+    # TBD: zip + zip vs izip example
+
+
+Comprehensions
+++++++++++++++
+* List c
+* Generator c
+* set c
+* Dict c
+
+
+
+Magic Methods
+-------------
+* Make it feel pythonic
+* reduce time to grasp your api etc.
+* let the user/caller decide (materialization)
+* Enable built ins in general
+* Enable iterable
+
+
+References & Further Reading
+____________________________
+* `Google Styleguide`_
+* `PEP 8 <https://peps.python.org/pep-0008/>`_
+* `Python Idioms`_
+* `Python Like You Mean It`_
+* `Python Programming Idioms`_
+
+Talks
+_____
+* `Transform Code into Beautiful, Idiomatic Python`_
+* `Stop Writing Classes`_
+* `Refactoring Python`_
+
+
+.. _Raymond Hettinger: https://github.com/rhettinger
+.. _Austin Bingham: https://leanpub.com/u/abingham
+.. _Robert Smallshire: https://leanpub.com/u/robert-smallshire
+.. _Will McGugan: https://github.com/willmcgugan
+
+.. _Google Styleguide: https://google.github.io/styleguide/pyguide.html:
+.. _PEP 8: https://peps.python.org/pep-0008/
+.. _Python Idioms: https://gist.github.com/0x4D31/f0b633548d8e0cfb66ee3bea6a0deff9
+.. _Python Like You Mean It: http://www.pythonlikeyoumeanit.com/module_2.html>
+.. _Python Programming Idioms: https://en.wikibooks.org/wiki/Python_Programming/Idioms
+
+.. _Transform Code into Beautiful, Idiomatic Python: https://www.youtube.com/watch?v=OSGv2VnC0go>
+.. _Transform Python Slides: https://speakerdeck.com/pyconslides/transforming-code-into-beautiful-idiomatic-python-by-raymond-hettinger-1
+.. _Stop Writing Classes: https://www.youtube.com/watch?v=o9pEzgHorH0
+.. _Refactoring Python: https://www.youtube.com/watch?v=D_6ybDcU5gc
+.. _Stealing Open Source code from Textual: https://textual.textualize.io/blog/2022/11/20/stealing-open-source-code-from-textual/
+
+.. _Austin Bingham - Courses: https://www.pluralsight.com/authors/austin-bingham
+.. _Rober Smallshire - Courses: https://www.pluralsight.com/authors/robert-smallshire

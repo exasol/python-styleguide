@@ -5,6 +5,7 @@ Python Styleguide
     :maxdepth: 2
     :hidden:
 
+    guides/style
     guides/tooling
     guides/issues
 
