@@ -32,7 +32,8 @@ release = '0.1.0'
 extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.builders.linkcheck',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'sphinx_inline_tabs'
 ]
 autosectionlabel_prefix_document = True
 autosectionlabel_maxdepth = 2
