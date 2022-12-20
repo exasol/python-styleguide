@@ -5,13 +5,13 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="🧐 Up For Consideration" href="misc.html" /><link rel="prev" title="📦 Dependencies &amp; Packaging" href="packaging.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.03.04"/>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
         <title>🚑 Code Health - Python Styleguide</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -38,10 +38,12 @@
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -222,7 +224,9 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -239,7 +243,7 @@
           <section id="code-health">
 <h1>🚑 Code Health<a class="headerlink" href="#code-health" title="Permalink to this headline">#</a></h1>
 <figure class="align-default" id="id6">
-<a class="reference external image-reference" href="https://xkcd.com/2347/"><img alt="xkcd-2347" src="https://imgs.xkcd.com/comics/code_quality.png"/></a>
+<a class="reference external image-reference" href="https://xkcd.com/2347/"><img alt="xkcd-2347" src="https://imgs.xkcd.com/comics/code_quality.png" /></a>
 <figcaption>
 <p><span class="caption-text">source: <a class="reference external" href="https://xkcd.com/">xkcd.com</a>
 license: <a class="reference external" href="https://creativecommons.org/licenses/by-nc/2.5/">CC BY-NC 2.5</a></span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
@@ -251,10 +255,11 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <p>Helps finding bugs and issues before they are a problem and improves overall code quality.</p>
 <section id="pros-cons">
 <h3>Pros &amp; Cons<a class="headerlink" href="#pros-cons" title="Permalink to this headline">#</a></h3>
-<div class="table-wrapper"><table class="colwidths-given docutils align-default">
+<div class="table-wrapper colwidths-given docutils container">
+<table class="colwidths-given docutils align-default">
 <colgroup>
-<col style="width: 50%"/>
-<col style="width: 50%"/>
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Pros ✅</p></th>
@@ -278,7 +283,8 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <td></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </section>
 <section id="alternatives">
 <h3>Alternatives<a class="headerlink" href="#alternatives" title="Permalink to this headline">#</a></h3>
@@ -294,10 +300,11 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <p><a class="reference external" href="https://coverage.readthedocs.io/en/6.3.2/">Project Homepage</a></p>
 <section id="id1">
 <h3>Pros &amp; Cons<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<div class="table-wrapper"><table class="colwidths-given docutils align-default">
+<div class="table-wrapper colwidths-given docutils container">
+<table class="colwidths-given docutils align-default">
 <colgroup>
-<col style="width: 50%"/>
-<col style="width: 50%"/>
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Pros ✅</p></th>
@@ -318,7 +325,8 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <td></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </section>
 <section id="id2">
 <h3>Alternatives<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
@@ -333,10 +341,11 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <p>Having type hints (information) is nice help, but having it actually checked finds errors and makes sure the type hints are correct.</p>
 <section id="id3">
 <h3>Pros &amp; Cons<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<div class="table-wrapper"><table class="colwidths-given docutils align-default">
+<div class="table-wrapper colwidths-given docutils container">
+<table class="colwidths-given docutils align-default">
 <colgroup>
-<col style="width: 50%"/>
-<col style="width: 50%"/>
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Pros ✅</p></th>
@@ -351,7 +360,8 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <td><p>Projects without any type annotations so far need migration strategy</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </section>
 <section id="id4">
 <h3>Alternatives<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
@@ -369,10 +379,11 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <p>Used by other Exasol projects, therefore it provides a “generic insight” about the “code health” for all of our project(s).</p>
 <section id="id5">
 <h3>Pros &amp; Cons<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
-<div class="table-wrapper"><table class="colwidths-given docutils align-default">
+<div class="table-wrapper colwidths-given docutils container">
+<table class="colwidths-given docutils align-default">
 <colgroup>
-<col style="width: 50%"/>
-<col style="width: 50%"/>
+<col style="width: 50%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Pros ✅</p></th>
@@ -387,7 +398,8 @@ license: <a class="reference external" href="https://creativecommons.org/license
 <td></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </section>
 </section>
 </section>
@@ -404,10 +416,10 @@ license: <a class="reference external" href="https://creativecommons.org/license
                 </div>
                 <div class="title">🧐 Up For Consideration</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="packaging.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -448,7 +460,7 @@ license: <a class="reference external" href="https://creativecommons.org/license
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
