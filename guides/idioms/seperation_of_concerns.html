@@ -397,13 +397,142 @@
 </li>
 </ul>
 </section>
+<section id="short-circuit-search">
+<h2>Short-Circuit Search<a class="headerlink" href="#short-circuit-search" title="Permalink to this headline">#</a></h2>
+<div class="tab-set docutils container">
+<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--1">✅ Good</label><div class="tab-content docutils container">
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">number</span>
+
+
+<span class="n">number</span> <span class="o">=</span> <span class="n">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--2">❌ Bad</label><div class="tab-content docutils container">
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="c1"># concerns are not seperated</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="n">number</span> <span class="o">=</span> <span class="n">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--3-input--3" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--3">🎭 Compare</label><div class="tab-content docutils container">
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With Generator Short Circuit</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">number</span>
+
+
+<span class="n">number</span> <span class="o">=</span> <span class="n">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="c1"># Naive Approach</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="c1"># concerns are not seperated</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+
+<span class="n">number</span> <span class="o">=</span> <span class="n">find_number</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="generic-solution">
+<h3>Generic Solution<a class="headerlink" href="#generic-solution" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">TypeVar</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">find_first</span><span class="p">(</span>
+        <span class="n">iterable</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">T</span><span class="p">],</span>
+        <span class="n">condition</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T</span><span class="p">],</span> <span class="nb">bool</span><span class="p">],</span>
+        <span class="n">terminal</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Find the first item which meets a specific condition.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        iterable:</span>
+<span class="sd">            which will be searched.</span>
+<span class="sd">        condition:</span>
+<span class="sd">            which needs to be meet by the item.</span>
+<span class="sd">        terminal:</span>
+<span class="sd">            value which will be returned if the condition did not return True</span>
+<span class="sd">            for any item in the iterable.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The first item in the iterable for which the condition returns True.</span>
+<span class="sd">        If the condition does not return True for any item in the iterable, the</span>
+<span class="sd">        terminal value is returned.</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">    &gt;&gt;&gt; numbers = [1, 2, 3, 4 ,5 ,6]</span>
+<span class="sd">    &gt;&gt;&gt; value = find_first(numbers, condition=lambda _: True)</span>
+<span class="sd">    &gt;&gt;&gt; value == 1</span>
+<span class="sd">    True</span>
+
+<span class="sd">    &gt;&gt;&gt; numbers = [1, 2, 3, 4 ,5 ,6]</span>
+<span class="sd">    &gt;&gt;&gt; value = find_first(numbers, condition=lambda item: item % 3 == 0)</span>
+<span class="sd">    &gt;&gt;&gt; value == 3</span>
+<span class="sd">    True</span>
+
+<span class="sd">    &gt;&gt;&gt; value = find_first(numbers, condition=lambda item: item % 7 == 0)</span>
+<span class="sd">    &gt;&gt;&gt; value is None</span>
+<span class="sd">    True</span>
+
+<span class="sd">    &gt;&gt;&gt; value = find_first(numbers, condition=lambda item: item % 7 == 0, terminal=7)</span>
+<span class="sd">    &gt;&gt;&gt; value == 7</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">(</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="n">item</span> <span class="o">=</span> <span class="n">terminal</span>
+    <span class="k">return</span> <span class="n">item</span>
+</pre></div>
+</div>
+</section>
+</section>
 <section id="context-manager">
 <h2>Context Manager<a class="headerlink" href="#context-manager" title="Permalink to this headline">#</a></h2>
 <p>Factor out context into a context manager.</p>
 <div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--4-input--1" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--1">✅ With Context Manager</label><div class="tab-content docutils container">
+<input checked="True" class="tab-input" id="tab-set--5-input--1" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--1">✅ With Context Manager</label><div class="tab-content docutils container">
 <div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--1">Python 3.8 - 3.10</label><div class="tab-content docutils container">
+<input checked="True" class="tab-input" id="tab-set--4-input--1" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--1">Python 3.8 - 3.10</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
 
@@ -425,7 +554,7 @@
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--2">Python 3.11</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--4-input--2" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--2">Python 3.11</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">chdir</span>
 
 
@@ -440,7 +569,7 @@
 </div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--4-input--2" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--2">❌ Naive Approach</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--5-input--2" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--2">❌ Naive Approach</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
 
@@ -454,7 +583,7 @@
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--4-input--3" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--3">🎭 Compare</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--5-input--3" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--3">🎭 Compare</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With Context Manager</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
@@ -509,7 +638,7 @@
 <h2>Decorator<a class="headerlink" href="#decorator" title="Permalink to this headline">#</a></h2>
 <p>Factor out unrelated repetitive work into a decorator.</p>
 <div class="tab-set docutils container">
-<input checked="True" class="tab-input" id="tab-set--5-input--1" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--1">✅ With Decorator</label><div class="tab-content docutils container">
+<input checked="True" class="tab-input" id="tab-set--6-input--1" name="tab-set--6" type="radio"><label class="tab-label" for="tab-set--6-input--1">✅ With Decorator</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
 
@@ -538,7 +667,7 @@
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--5-input--2" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--2">❌ Naive Approach</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--6-input--2" name="tab-set--6" type="radio"><label class="tab-label" for="tab-set--6-input--2">❌ Naive Approach</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
 
 
@@ -557,7 +686,7 @@
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--5-input--3" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--3">🎭 Compare</label><div class="tab-content docutils container">
+<input class="tab-input" id="tab-set--6-input--3" name="tab-set--6" type="radio"><label class="tab-label" for="tab-set--6-input--3">🎭 Compare</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># With Decorator</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
@@ -672,6 +801,10 @@
 <li><a class="reference internal" href="#">Separation of Concerns</a><ul>
 <li><a class="reference internal" href="#filters">Filters</a></li>
 <li><a class="reference internal" href="#adapters">Adapters</a></li>
+<li><a class="reference internal" href="#short-circuit-search">Short-Circuit Search</a><ul>
+<li><a class="reference internal" href="#generic-solution">Generic Solution</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#context-manager">Context Manager</a></li>
 <li><a class="reference internal" href="#decorator">Decorator</a></li>
 </ul>
