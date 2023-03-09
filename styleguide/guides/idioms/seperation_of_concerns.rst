@@ -125,6 +125,87 @@ Adapters
                 yield first, True, previous_value
 
 
+Short-Circuit Search
+++++++++++++++++++++
+
+.. tab:: ✅ Good
+
+    .. literalinclude:: ../../_static/idioms/short_circuit.py
+        :language: python3
+        :start-after: # With Generator Short Circuit
+        :end-before: # Naive Approach
+
+.. tab:: ❌ Bad
+
+    .. literalinclude:: ../../_static/idioms/short_circuit.py
+        :language: python3
+        :start-after: # Naive Approach
+
+.. tab:: 🎭 Compare
+
+    .. literalinclude:: ../../_static/idioms/short_circuit.py
+        :language: python3
+
+
+Generic Solution
+________________
+
+.. code-block:: python
+
+    from typing import Iterator, Any, Callable, TypeVar
+
+    T = TypeVar('T')
+
+
+    def find_first(
+            iterable: Iterator[T],
+            condition: Callable[[T], bool],
+            terminal: Any = None
+    ) -> Any:
+        """
+        Find the first item which meets a specific condition.
+
+        Args:
+            iterable:
+                which will be searched.
+            condition:
+                which needs to be meet by the item.
+            terminal:
+                value which will be returned if the condition did not return True
+                for any item in the iterable.
+
+        Returns:
+            The first item in the iterable for which the condition returns True.
+            If the condition does not return True for any item in the iterable, the
+            terminal value is returned.
+
+        Examples:
+
+        >>> numbers = [1, 2, 3, 4 ,5 ,6]
+        >>> value = find_first(numbers, condition=lambda _: True)
+        >>> value == 1
+        True
+
+        >>> numbers = [1, 2, 3, 4 ,5 ,6]
+        >>> value = find_first(numbers, condition=lambda item: item % 3 == 0)
+        >>> value == 3
+        True
+
+        >>> value = find_first(numbers, condition=lambda item: item % 7 == 0)
+        >>> value is None
+        True
+
+        >>> value = find_first(numbers, condition=lambda item: item % 7 == 0, terminal=7)
+        >>> value == 7
+        True
+        """
+        items = (item for item in iterable if condition(item))
+        try:
+            item = next(items)
+        except StopIteration:
+            item = terminal
+        return item
+
 Context Manager
 +++++++++++++++
 Factor out context into a context manager.
