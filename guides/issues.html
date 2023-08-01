@@ -535,15 +535,15 @@ or at least it help to understand the current state more clearly.</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Status Update</span>
 Further investigation&#39;s have shown that the basic SQLA test suite mostly is intact after the upgrade to <span class="sb">`1.4`</span> (14 failures), when run in &quot;isolation&quot;. Various exasol specific test suites:
 
-   <span class="k">*</span> test/test_get_metadata_functions.py
-   <span class="k">*</span> test/test_large_metadata.py
-   <span class="k">*</span> test/test_regression.py (TranslateMap)
+<span class="w">   </span><span class="k">*</span><span class="w"> </span>test/test_get_metadata_functions.py
+<span class="w">   </span><span class="k">*</span><span class="w"> </span>test/test_large_metadata.py
+<span class="w">   </span><span class="k">*</span><span class="w"> </span>test/test_regression.py (TranslateMap)
 
 seem to have negative side effects which cause 100+ tests to  :boom: fail/crash, if run after those test suites.
 This further strengthens the case for the <span class="gs">**assumptions**</span> mentioned in the previous update:
 
-   <span class="k">*</span> Setup/Teardown mechanic of <span class="sb">`testing.fixtures.TablesTest`</span> has changed
-   <span class="k">*</span> Setup/Teardown mechanic fails due to leftovers in tests DB
+<span class="w">   </span><span class="k">*</span><span class="w"> </span>Setup/Teardown mechanic of <span class="sb">`testing.fixtures.TablesTest`</span> has changed
+<span class="w">   </span><span class="k">*</span><span class="w"> </span>Setup/Teardown mechanic fails due to leftovers in tests DB
 
 Also, this narrows down the potential root cause(s).
 
@@ -552,13 +552,13 @@ Common to all those test suites to be that they add/remove schemas.
 For <span class="sb">`test/test_regression.py`</span> it have been proven that the schema manipulating test (<span class="sb">`TranslateMap`</span>) causes some negative side effect on following test suits.
 
 <span class="gu">## Notes &amp; Ideas (from discussion with @tkilias )</span>
-<span class="k">*</span> Is schema inference still working correctly?
-<span class="k">*</span> Does the &quot;disabled&quot; caching cause side effects?
-<span class="k">*</span> Do implicit schema open and closes affect the current schema for follow up tests?
+<span class="k">*</span><span class="w"> </span>Is schema inference still working correctly?
+<span class="k">*</span><span class="w"> </span>Does the &quot;disabled&quot; caching cause side effects?
+<span class="k">*</span><span class="w"> </span>Do implicit schema open and closes affect the current schema for follow up tests?
 
 <span class="gu">## Next Steps</span>
-<span class="k">*</span> Analyze effects of implicit open/close of schema(s)
-<span class="k">*</span> A more in depth analysis regarding side effects and cleanup of the mentioned test suites will be done
+<span class="k">*</span><span class="w"> </span>Analyze effects of implicit open/close of schema(s)
+<span class="k">*</span><span class="w"> </span>A more in depth analysis regarding side effects and cleanup of the mentioned test suites will be done
 </pre></div>
 </div>
 <p>To see the example update in it’s full context look <a class="reference external" href="https://github.com/exasol/sqlalchemy-exasol/issues/106#issuecomment-1245305351">here</a>.</p>
