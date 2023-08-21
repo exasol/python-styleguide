@@ -8,8 +8,8 @@ authors = ["Exasol <opensource@exasol.com>"]
 python = ">=3.8,<4.0"
 
 [tool.poetry.dev-dependencies]
-Sphinx = "^5.3.0"
-furo = "^2023.3.27"
+Sphinx = "^6.2.1"
+furo = "^2023.8.19"
 nox = "^2023.4.22"
 black = "^23.7.0"
 isort = "^5.10.1"
