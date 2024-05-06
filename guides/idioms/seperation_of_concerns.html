@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="🔧 Tooling" href="../tooling.html" /><link rel="prev" title="Dictionaries" href="dictionaries.html" />
 
-    <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
+    <!-- Generated with Sphinx 7.1.2 and Furo 2024.04.27 -->
         <title>Separation of Concerns - Python Styleguide</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=437aa6ec" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -114,6 +114,8 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
 
 
 <div class="page">
@@ -214,11 +216,11 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <article role="main">
+        <article role="main" id="furo-main-content">
           <section id="separation-of-concerns">
-<h1>Separation of Concerns<a class="headerlink" href="#separation-of-concerns" title="Permalink to this heading">#</a></h1>
+<h1>Separation of Concerns<a class="headerlink" href="#separation-of-concerns" title="Permalink to this heading">¶</a></h1>
 <section id="filters">
-<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this heading">#</a></h2>
+<h2>Filters<a class="headerlink" href="#filters" title="Permalink to this heading">¶</a></h2>
 <div class="tab-set docutils container">
 <input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">✅ With Filter</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
@@ -275,7 +277,7 @@
 </div>
 </section>
 <section id="adapters">
-<h2>Adapters<a class="headerlink" href="#adapters" title="Permalink to this heading">#</a></h2>
+<h2>Adapters<a class="headerlink" href="#adapters" title="Permalink to this heading">¶</a></h2>
 <div class="tab-set docutils container">
 <input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">✅ With Adapter</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">first</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">loop_first</span><span class="p">([]):</span>
@@ -398,7 +400,7 @@
 </ul>
 </section>
 <section id="short-circuit-search">
-<h2>Short-Circuit Search<a class="headerlink" href="#short-circuit-search" title="Permalink to this heading">#</a></h2>
+<h2>Short-Circuit Search<a class="headerlink" href="#short-circuit-search" title="Permalink to this heading">¶</a></h2>
 <div class="tab-set docutils container">
 <input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--1">✅ Good</label><div class="tab-content docutils container">
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
@@ -468,7 +470,7 @@
 </div>
 </div>
 <section id="generic-solution">
-<h3>Generic Solution<a class="headerlink" href="#generic-solution" title="Permalink to this heading">#</a></h3>
+<h3>Generic Solution<a class="headerlink" href="#generic-solution" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">TypeVar</span>
 
 <span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
@@ -527,7 +529,7 @@
 </section>
 </section>
 <section id="context-manager">
-<h2>Context Manager<a class="headerlink" href="#context-manager" title="Permalink to this heading">#</a></h2>
+<h2>Context Manager<a class="headerlink" href="#context-manager" title="Permalink to this heading">¶</a></h2>
 <p>Factor out context into a context manager.</p>
 <div class="tab-set docutils container">
 <input checked="True" class="tab-input" id="tab-set--5-input--1" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--1">✅ With Context Manager</label><div class="tab-content docutils container">
@@ -635,7 +637,7 @@
 </ul>
 </section>
 <section id="decorator">
-<h2>Decorator<a class="headerlink" href="#decorator" title="Permalink to this heading">#</a></h2>
+<h2>Decorator<a class="headerlink" href="#decorator" title="Permalink to this heading">¶</a></h2>
 <p>Factor out unrelated repetitive work into a decorator.</p>
 <div class="tab-set docutils container">
 <input checked="True" class="tab-input" id="tab-set--6-input--1" name="tab-set--6" type="radio"><label class="tab-label" for="tab-set--6-input--1">✅ With Decorator</label><div class="tab-content docutils container">
@@ -821,7 +823,7 @@
 </div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=2389946f"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/scripts/furo.js?v=4e2eecee"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/tabs.js?v=3ee01567"></script>
