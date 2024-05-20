@@ -28,7 +28,7 @@ jobs:
           poetry run python -m nox -s build
           touch styleguide/_build/html/.nojekyll
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
           branch: gh-pages
           folder: ./styleguide/_build/html
